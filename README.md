@@ -169,13 +169,13 @@ test/
 
 2. Show the history (as above) including *all* branches in the repository and include a graph connecting the commits:
    ```
-
+   git log --graph --all --decorate --oneline
    ```
 
 
 3. List all the files in the current branch of the repository:
    ```
-   todo your answer
+   git ls-tree -r HEAD --name-only
    ```
    Example output:
    ```
