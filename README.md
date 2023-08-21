@@ -192,11 +192,59 @@ test/
 
 **TODO**: This section is free-form.  Create 4 numbered items for common branch-and-merge tasks you would like to remember and show the git command to do each one. (You are write *more* than 4 if you want.)
 
+1. Creating a New Branch: To create a new branch and switch to it
+   ```
+   git checkout -b new-feature
+   ```
+
+2. Switching Between Branches: To switch to an existing branch
+   ```
+   git checkout existing-branch
+   ```
+
+3. Merging Branches: To merge changes from one branch into another
+   ```
+   git checkout target-branch
+   git merge source-branch
+   ```
+
+4. Viewing Branches: To see all branches and highlight the current one:
+   ```
+   git branch
+   ```
+
+5. Rebasing: To integrate changes from one branch onto another:
+   ```
+   git checkout feature-branch
+   git rebase main
+   ```
+
 
 
 ## Favorites
 
 > TODO: Describe *at least* 1 task that you would like to remember, and the git command(s) to do it.
+
+Rebasing a Feature Branch onto the Main Branch
+1. First, ensure you're on the feature branch:
+   ```
+   git checkout feature-branch
+   ```
+2. Perform the rebase, integrating changes from the main branch onto the feature branch:
+   ```
+   git rebase main
+   ```
+3. If there are any conflicts, resolve them by editing the conflicted files, then:
+   ```
+   git add conflicted-file
+   git rebase --continue
+   ```
+4. Once the rebase is complete, your feature branch's commits are now on top of the main branch's commits.
+
+5. If necessary, you can force push the rebased feature branch to update the remote repository:
+   ```
+   git push -f origin feature-branch
+   ```
 
 
 
